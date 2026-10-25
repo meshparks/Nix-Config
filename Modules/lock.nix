@@ -1,5 +1,18 @@
 { config, lib, pkgs, ...}:
 {
+
+  # services.openssh = {
+  #   enable = true;
+  #   settings = {
+  #     PasswordAuthetication = false;
+  #     PermitRootLogin = "no";
+  #   };
+  #   users.user.meshparks.openssh.authorizedKeys.keys= [
+  #     ""
+  #   ];
+  # };
+
+
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -32,6 +45,18 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
+
+  # # Git Jujutsu config
+  #   programs.jujutsu = {
+  #     enable = true;
+  #     settings = {
+  #       user = {
+  #         name = "meshpark";
+  #         email = "meshpark@proton.me";
+  #       };
+  #       ui.default-command = "log";
+  #     };
+  #   };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

@@ -9,19 +9,43 @@
       ghostty # Terminal shell emulator.
       gnome-extension-manager
       gnome-tweaks
+      obs-studio
       zed-editor # The best text editor.
       vesktop
+      pycharm
+      jetbrains-toolbox
       vscodium
+      intellij-idea
+      btop
+
+      # libreoffice
       penpot-desktop
       cowsay
       gparted
+      steam-run
+      blender
+      lazygit
+      opencode
+      jujutsu
       bibata-cursors #
       ntfs3g
       obsidian # Markdown based word editor.
 
       # Flake Specific
       inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default # The Best Browser On Earth
+      inputs.helium.packages.${system}.default # And then Helium walked in
   ];
+
+  environment.gnome.excludePackages = with pkgs;[
+      gnome-tour
+      cheese
+      gnome-music
+      epiphany
+    ];
+
+    nixpkgs.config.permittedInsecurePackages = [
+        "electron-42.11.18"
+      ];
 
   nixpkgs.config.allowUnfree = true; # Allows proprietary software, like obsidian.
   programs.firefox.enable = true; # Enables firefox

@@ -34,6 +34,10 @@
     clippy
   ];
 
+  nix.settings.experimental-features = [
+    "nix-command" "flakes"
+  ];
+
   # Does exactly that
   programs.home-manager.enable = true;
 }
