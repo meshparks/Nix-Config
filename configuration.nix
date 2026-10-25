@@ -12,6 +12,7 @@
       ./Modules/packages.nix
       ./Modules/parlor.nix
       ./Modules/users.nix
+      ./Modules/shell.nix
     ];
 
   nix.settings.experimental-features = [
